@@ -16,6 +16,6 @@ for HOST_ID in ${HOSTS}
 				snmpbulkwalk -m ALL -v2c -c${COMMUNITY} ${HOST_ID} -OUQs ${OID} | 
 				sed 's/\.0//g'|
 				sed 's/ = /=/g'|
-				xargs echo ${DATE} ${HOST_ID} ${OI}D >> ${DIR_PATH}/${HOST_ID}/${OID}-${DPATH}.log
+				xargs echo ${DATE} ${HOST_ID} ${OID} >> ${DIR_PATH}/${HOST_ID}/${OID}-${DPATH}.log
 			done
 	done
