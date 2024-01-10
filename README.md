@@ -48,7 +48,7 @@ options:
   "email": "jpenddreth0@census.gov",
   "gender": "Female",
   "ip_address": "26.58.193.2",
-  "catalog": "<catalog>\n      <book id=\"bk112\">\n      <author>Galos, Mike</author>\n      <title>Visual Studio 7: A Comprehensive Guide</title>\n      <genre>Computer</genre>\n      <price>49.95</price>\n      <publish_date>2001-04-16</publish_date>\n      <description>Microsoft Visual Studio 7 is explored in depth,\n      looking at how Visual Basic, Visual C++, C#, and ASP+ are \n      integrated into a comprehensive development \n      environment.</description>\n   </book>\n</catalog>" 
+  "xmldata": "<catalog>\n      <book id=\"bk112\">\n      <author>Galos, Mike</author>\n      <title>Visual Studio 7: A Comprehensive Guide</title>\n      <genre>Computer</genre>\n      <price>49.95</price>\n      <publish_date>2001-04-16</publish_date>\n      <description>Microsoft Visual Studio 7 is explored in depth,\n      looking at how Visual Basic, Visual C++, C#, and ASP+ are \n      integrated into a comprehensive development \n      environment.</description>\n   </book>\n</catalog>" 
 }]
 ```
 
@@ -64,7 +64,7 @@ options:
     "email": "jpenddreth0@census.gov",
     "gender": "Female",
     "ip_address": "26.58.193.2",
-    "catalog": {
+    "xmldata": {
       "catalog": {
         "book": {
           "@id": "bk112",
@@ -74,3 +74,8 @@ options:
           "price": "49.95",
           "publish_date": "2001-04-16",
           "description": "Microsoft Visual Studio 7 is explored in depth,\n      looking at how Visual Basic, Visual C++, C#, and ASP+ are \n      integrated into a comprehensive development \n      environment."
+        }
+      }
+    }
+  }
+]
