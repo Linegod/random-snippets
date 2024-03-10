@@ -31,11 +31,15 @@ for item in data:
     # Extract the field containing XML from each item
     xml_data = item[json_field]
 
-    # Convert XML to JSON, strip out newlines
-    json_data = json.dumps(xmltodict.parse(xml_data), indent=2).replace("\n", "")
+    try:
+        # Convert XML to JSON, strip out newlines
+        json_data = xmltodict.parse(xml_data)
 
-    # Update the original item with the new JSON data
-    item[json_field] = json.loads(json_data)
+        # Update the original item with the new JSON data
+        item[json_field] = json_data
+    except Exception as e:
+        print(f"Error parsing XML data at line {e.lineno}, column {e.offset}: {e}")
+        print(f"Bad XML data: (xml_data)")
 
 # Write the updated JSON to a new file
 with open(output_file, 'w') as updated_file:
