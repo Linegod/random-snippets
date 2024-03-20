@@ -79,6 +79,7 @@ options:
     }
   }
 ]
+```
 
 ## syslog_json_splunk_format.py 
 
