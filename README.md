@@ -96,7 +96,7 @@ This is a ansible callback
 ### example output
 
 ```
-2024-03-19 23:30:42,055 p=1179951 u=nak n=ansible logger | self_hostname="gistrate" ansible-command="task" execution="OK" host="test5" task="show the groups the host(s) are in" message="{
+2024-03-19 23:30:42,055 p=1179951 u=nak n=ansible logger | self_hostname="gistrate" ansible-command="task" execution="OK" hostname="test5" task="show the groups the host(s) are in" message="{
     "changed": false,
     "msg": [
         "group2"

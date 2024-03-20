@@ -111,7 +111,7 @@ class CallbackModule(CallbackBase):
         hostname = result._host.get_name()
         task_name = result._task.name
         if result._task.action != "gather_facts" or self.get_option("setup"):
-            self.logger.info('self_hostname="%s" ansible-command="task" execution="OK" host="%s" task="%s" message="%s"', self.hostname, hostname, task_name, self._dump_results(res))
+            self.logger.info('self_hostname="%s" ansible-command="task" execution="OK" hostname="%s" task="%s" message="%s"', self.hostname, hostname, task_name, self._dump_results(res))
 
     def v2_runner_on_skipped(self, result):
         hostname = result._host.get_name()
