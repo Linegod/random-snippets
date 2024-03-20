@@ -7,13 +7,13 @@ I should really commit more.
 
 All code is in this repo is covered by LICENSE
 
-### snmp_oid_collect.sh
+## snmp_oid_collect.sh
 
 This script does a bulkwalk of a snmp table
 
 and turns the output into a key-value pair, suitable for ingestion into Splunk
 
-### split_json.sh
+## split_json.sh
 
 Converts ${INPUT} into single line objects,
 
@@ -79,3 +79,26 @@ options:
     }
   }
 ]
+
+## syslog_json_splunk_format.py 
+
+This is a ansible callback 
+
+      - This plugin logs ansible-playbook and ansible runs to a syslog server in JSON format suitable for Splunk
+
+      - This plugin has been adapted from the the syslog_json plugin - https://github.com/ansible-collections/community.general/blob/main/plugins/callback/syslog_json.py
+
+      - The syslog msg information has been adjusted to be key=value pairs
+
+      - The task name has been added to the logged information
+
+### example output
+
+```
+2024-03-19 23:30:42,055 p=1179951 u=nak n=ansible logger | self_hostname="gistrate" ansible-command="task" execution="OK" host="test5" task="show the groups the host(s) are in" message="{
+    "changed": false,
+    "msg": [
+        "group2"
+    ]
+}"
+```
