@@ -5,7 +5,7 @@ random snippets of code
 
 I should really commit more.
 
-All code is in this repo is covered by LICENSE
+All code is in this repo is covered by LICENSE, unless otherwise stated in the file
 
 ## snmp_oid_collect.sh
 
@@ -85,13 +85,13 @@ options:
 
 This is a ansible callback 
 
-      - This plugin logs ansible-playbook and ansible runs to a syslog server in JSON format suitable for Splunk
+- This plugin logs ansible-playbook and ansible runs to a syslog server in JSON format suitable for Splunk
 
-      - This plugin has been adapted from the the syslog_json plugin - https://github.com/ansible-collections/community.general/blob/main/plugins/callback/syslog_json.py
+- This plugin has been adapted from the the syslog_json plugin - https://github.com/ansible-collections/community.general/blob/main/plugins/callback/syslog_json.py
 
-      - The syslog msg information has been adjusted to be key=value pairs
+- The syslog msg information has been adjusted to be key=value pairs
 
-      - The task name has been added to the logged information
+- The task name has been added to the logged information
 
 ### example output
 
