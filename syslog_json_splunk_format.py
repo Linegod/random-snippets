@@ -116,20 +116,20 @@ class CallbackModule(CallbackBase):
     def v2_runner_on_skipped(self, result):
         hostname = result._host.get_name()
         task_name = result._task.name
-        self.logger.info('self_hostname="%s" ansible-command="task" execution="SKIPPED" hostname="%s" message="%s"', self.hostname, hostname, task_name, 'skipped')
+        self.logger.info('self_hostname="%s" ansible-command="task" execution="SKIPPED" hostname="%s" task="%s" message="%s"', self.hostname, hostname, task_name, 'skipped')
 
     def v2_runner_on_unreachable(self, result):
         res = result._result
         hostname = result._host.get_name()
         task_name = result._task.name
-        self.logger.error('self_hostname="%s" ansible-command="task" execution="UNREACHABLE" hostname="%s" message="%s"', self.hostname, hostname, task_name, self._dump_results(res))
+        self.logger.error('self_hostname="%s" ansible-command="task" execution="UNREACHABLE" hostname="%s" task="%s" message="%s"', self.hostname, hostname, task_name, self._dump_results(res))
 
     def v2_runner_on_async_failed(self, result):
         res = result._result
         hostname = result._host.get_name()
         task_name = result._task.name
         jid = result._result.get('ansible_job_id')
-        self.logger.error('self_hostname="%s" ansible-command="task" execution="FAILED" hostname="%s" message="%s"', self.hostname, hostname, task_name, self._dump_results(res))
+        self.logger.error('self_hostname="%s" ansible-command="task" execution="FAILED" hostname="%s" task="%s" message="%s"', self.hostname, hostname, task_name, self._dump_results(res))
 
     def v2_playbook_on_import_for_host(self, result, imported_file):
         hostname = result._host.get_name()
